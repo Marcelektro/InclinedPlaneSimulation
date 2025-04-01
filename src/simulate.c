@@ -22,6 +22,8 @@ void calculate_frame(const Environment *env, Sphere *sphere, const double dt) {
     // recalc y based on the slope equation
     const double slope = (env->plane_b.y - env->plane_a.y) / (env->plane_b.x - env->plane_a.x);
     sphere->position.y = env->plane_a.y + slope * (sphere->position.x - env->plane_a.x) + sphere->radius;
+
+    sphere->tracked_point = calculate_sphere_tracked_point(sphere);
 }
 
 

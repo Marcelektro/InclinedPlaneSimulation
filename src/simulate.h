@@ -39,6 +39,9 @@ typedef struct {
     double theta;
     double omega;
     double epsilon;
+
+    // tracked point
+    Vec2d tracked_point; // point on the perimeter of the sphere
 } Sphere;
 
 Sphere create_sphere(double mass, double radius, double moment_of_inertia,
